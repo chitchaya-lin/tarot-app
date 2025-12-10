@@ -28,11 +28,11 @@
     }
 
     .full-deck {
-      display: grid;
-      grid-template-columns: repeat(10, 1fr);
-      gap: var(--ui-gap);
-      margin-top: var(--ui-gap);
-    }
+  display: grid;
+  grid-template-columns: repeat(10, 63px); /* match card width *///////
+  gap: 6px;
+  justify-content: center;
+}
 
     .full-deck img,
     .full-deck .card-back {
@@ -53,11 +53,12 @@
 
     .selected-cards img {
       display: block;
-      width: 4in;
+      width: 3.5in;////////////
       height: 6in;
       margin: 0;
       padding: 0;
       border-radius: 8px;
+      justify-content: center;
     }
 
     /* Negative revealed cards */
@@ -198,6 +199,7 @@
           Clear Revealed Cards
         </button>
       </div>
+      <div style="height: var(--ui-gap);"></div> <!-- Spacer between buttons and deck -->
       <div class="full-deck" id="negDeck${i}"></div>
       <div id="negSelected${i}" class="selected-cards"></div>
     </div>
@@ -212,6 +214,7 @@
           Clear Revealed Cards
         </button>
       </div>
+      <div style="height: var(--ui-gap);"></div> <!-- Spacer between buttons and deck -->
       <div class="full-deck" id="posDeck${i}"></div>
       <div id="posSelected${i}" class="selected-cards"></div>
     </div>
